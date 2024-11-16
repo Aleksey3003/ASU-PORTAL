@@ -1,0 +1,110 @@
+.personnel-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Стили для формы */
+  .personnel-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .personnel-form input {
+    width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .submit-btn {
+    padding: 10px 20px;
+    background-color: #5a7622; /* Олива */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #8a9a5b; /* Світла олива */
+  }
+  
+  /* Стили для таблицы */
+  .personnel-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .personnel-table th, .personnel-table td {
+    padding: 12px 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  .personnel-table th {
+    background-color: #5a7622; /* Олива */
+    color: white;
+  }
+  
+  .personnel-table td {
+    background-color: #000000;
+  }
+  
+  .personnel-table tr:nth-child(even) {
+    background-color: #e9e9e9;
+  }
+  
+  .personnel-table tr:hover {
+    background-color: #d3d3d3;
+  }
+  
+  /* Стили для кнопок */
+  .edit-btn, .delete-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+  }
+  
+  .edit-btn {
+    background-color: #8A9A5B; /* Світла олива */
+    color: white;
+  }
+  
+  .edit-btn:hover {
+    background-color: #8B6E2F; /* Кайот */
+    transform: scale(1.05);
+  }
+  
+  .delete-btn {
+    background-color: #B22222; /* Красный */
+    color: white;
+  }
+  
+  .delete-btn:hover {
+    background-color: #8B0000; /* Темный красный */
+    transform: scale(1.05);
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  

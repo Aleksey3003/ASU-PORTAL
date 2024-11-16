@@ -1,0 +1,39 @@
+/* Контейнер для галереи */
+.gallery-container {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 20px 0;
+    background-color: #f4f4f4;
+  }
+  
+  /* Бегущая лента */
+  .gallery-scroll {
+    display: flex;
+    justify-content: flex-start;
+    animation: scroll-left 20s linear infinite;
+  }
+  
+  /* Стили для изображений */
+  .gallery-items {
+    display: flex;
+  }
+  
+  .gallery-items img {
+    margin-right: 15px;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Анимация прокрутки */
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  

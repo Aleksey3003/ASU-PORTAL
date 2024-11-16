@@ -1,0 +1,280 @@
+/* Загальні стилі */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #2F4F4F, #333);
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background 0.3s ease;
+}
+
+/* Цвета */
+:root {
+  --olive: #5a7622; /* Олива */
+  --khaki: #BDB76B; /* Хакі */
+  --coyote: #8B6E2F; /* Кайот */
+  --pixel-green: #4F6B32; /* Пиксельный зеленый */
+  --sand: #C2B280; /* Песочный */
+  --army-green: #4B5320; /* Армейский зеленый */
+  --light-olive: #8A9A5B; /* Светлая олива */
+  --dark-gray: #333; /* Темно-серый */
+  --accent-color: #D1D1D1; /* Для текста и акцентов */
+  --shadow-color: rgba(0, 0, 0, 0.5); /* Тень для кнопок */
+}
+
+/* Хедер */
+.header {
+  background: linear-gradient(45deg, var(--olive), var(--army-green));
+  color: white;
+  padding: 30px 0;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  position: relative;
+  overflow: hidden;
+  animation: slideIn 1s ease-out;
+}
+
+.navbar {
+  text-align: center;
+}
+
+.navbar-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  position: relative;
+}
+
+.navbar-item {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 15px 25px;
+  border-radius: 8px;
+  background-color: var(--light-olive);
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+/* Стиль кнопки при наведении */
+.navbar-item:hover {
+  background-color: var(--coyote);
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px var(--shadow-color);
+  cursor: pointer;
+}
+
+.navbar-item::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.navbar-item:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Анимация для хедера */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Футер */
+.footer {
+  background: linear-gradient(45deg, var(--coyote), var(--khaki));
+  color: white;
+  text-align: justify;
+  padding: 30px 20px;
+  margin-top: 40px;
+  box-shadow: 0 -4px 10px var(--shadow-color);
+  position: relative;
+}
+
+/* Секція контенту */
+.page-content {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+  background: linear-gradient(135deg, var(--army-green), var(--sand));
+  border-radius: 10px;
+  box-shadow: 0 6px 20px var(--shadow-color);
+  transition: all 0.3s ease;
+}
+
+h1 {
+  font-size: 3.5rem;
+  color: var(--pixel-green);
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  animation: textGlow 1.5s infinite alternate;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #ddd;
+  margin-bottom: 20px;
+  text-align: justify;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  animation: fadeInText 2s ease-out;
+}
+
+/* Анимация для текста */
+@keyframes textGlow {
+  0% {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(0, 255, 0, 0.8);
+  }
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Секція Hero (для главной страницы или секции) */
+.hero {
+  background: linear-gradient(135deg, var(--khaki), var(--army-green));
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero h1 {
+  font-size: 4.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  animation: textBounce 2s ease-out;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  color: var(--accent-color);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Эффект анимации для фоновых элементов */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500%;
+  height: 500%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: moveCircle 3s linear infinite;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+@keyframes moveCircle {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+/* Эффект bounce для Hero заголовка */
+@keyframes textBounce {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-10px);
+  }
+  40% {
+    transform: translateY(5px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+  80% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 768px) {
+  .navbar-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .navbar-item {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .page-content {
+    padding: 40px 10px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+}
